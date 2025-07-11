@@ -1,0 +1,30 @@
+# 简化版工作流 - 直接下载最新 release 文件
+name: Deploy using latest release
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    # 下载最新 release 文件
+    - name: Download latest release
+      uses: robinraju/release-downloader@v1.8
+      with:
+        repository: robinat4am/deployment-new
+        tag: v1.36.0  # Renovate 会监控并更新这个版本
+        fileName: "*"  # 下载所有文件，或指定特定文件如 "*.zip"
+        out-file-path: deployment-files
+    
+    - name: Use deployment files
+      run: |
+        echo "Downloaded files:"
+        ls -la deployment-files/
+        echo "Using deployment files for deployment..."

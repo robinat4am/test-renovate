@@ -7,11 +7,18 @@
     {
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
-    },
+    }
+  ],
+  "regexManagers": [
     {
-      "matchDatasources": ["git-tags"],
-      "matchPackageNames": ["deployment-new"],
-      "enabled": true
+      "fileMatch": ["\\.env\\.versions$", "\\.github/workflows/.*\\.yml$", "Dockerfile$"],
+      "matchStrings": [
+        "DEPLOYMENT_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)",
+        "tag: (?<currentValue>v\\d+\\.\\d+\\.\\d+)",
+        "DEPLOYMENT_NEW_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "robinat4am/deployment-new",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
