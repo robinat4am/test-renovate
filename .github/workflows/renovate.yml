@@ -1,0 +1,20 @@
+name: Renovate
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Renovate
+        uses: renovatebot/github-action@v36
+        env:
+          GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}  # 用于提交 PR
+          # 可选配置
+          RENOVATE_EXTRA_FLAGS: --dry-run=false  # 设置为 false 以实际创建 PR
+          RENOVATE_CONFIG_FILE: renovate.json  # 指定配置文件
