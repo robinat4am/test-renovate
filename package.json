@@ -1,0 +1,15 @@
+{
+  "name": "test-renovate",
+  "version": "1.0.0",
+  "description": "Test repository for Renovate dependency updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "deployment-new": "git+https://github.com/robinat4am/deployment-new.git"
+  },
+  "keywords": ["renovate", "dependency-management"],
+  "author": "",
+  "license": "ISC"
+}

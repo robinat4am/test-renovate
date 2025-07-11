@@ -16,6 +16,8 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
         env:
+          # 指定要运行的仓库
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
           # 可选配置
-          RENOVATE_EXTRA_FLAGS: --dry-run=false  # 设置为 false 以实际创建 PR
-          RENOVATE_CONFIG_FILE: renovate.json  # 指定配置文件
+          RENOVATE_DRY_RUN: false
+          LOG_LEVEL: debug

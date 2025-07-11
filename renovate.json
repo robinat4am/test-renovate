@@ -3,18 +3,18 @@
     "config:recommended"
   ],
   "schedule": ["before 5am every weekday"],
-  "repositories": [
-    "https://github.com/robinat4am/deployment-new"
-  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["*"],
-      "matchRepositories": ["https://github.com/robinat4am/deployment-new"],
+      "matchDatasources": ["git-tags"],
+      "matchPackageNames": ["deployment-new"],
       "enabled": true
     }
-  ]
+  ],
+  "git": {
+    "enabled": true
+  }
 }
