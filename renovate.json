@@ -13,8 +13,5 @@
       "matchPackageNames": ["deployment-new"],
       "enabled": true
     }
-  ],
-  "git": {
-    "enabled": true
-  }
+  ]
 }

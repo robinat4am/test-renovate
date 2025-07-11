@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "deployment-new": "git+https://github.com/robinat4am/deployment-new.git"
+    "deployment-new": "git+https://github.com/robinat4am/deployment-new.git#v1.36.0"
   },
   "keywords": ["renovate", "dependency-management"],
   "author": "",
