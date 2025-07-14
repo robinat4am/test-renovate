@@ -19,7 +19,7 @@ jobs:
       uses: robinraju/release-downloader@v1.8
       with:
         repository: robinat4am/deployment-new
-        tag: v1.36.0  # Renovate 会监控并更新这个版本
+        tag: v1.37.0  # Renovate 会监控并更新这个版本
         fileName: "*"  # 下载所有文件，或指定特定文件如 "*.zip"
         out-file-path: deployment-files
     
