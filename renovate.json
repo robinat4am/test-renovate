@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended", ":disableDependencyDashboard"],
   "schedule": ["before 5am every weekday"],
   "packageRules": [
     {
