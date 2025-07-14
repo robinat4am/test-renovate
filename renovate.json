@@ -11,11 +11,12 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["\\.env\\.versions$", "\\.github/workflows/.*\\.yml$", "Dockerfile$"],
+      //"fileMatch": ["\\.env\\.versions$", "\\.github/workflows/.*\\.yml$", "Dockerfile$"],
+      "fileMatch": ["\\.github/workflows/.*\\.yml$"],
       "matchStrings": [
-        "DEPLOYMENT_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)",
+        //"DEPLOYMENT_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)",
         "tag: (?<currentValue>v\\d+\\.\\d+\\.\\d+)",
-        "DEPLOYMENT_NEW_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+        //"DEPLOYMENT_NEW_VERSION=(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "robinat4am/deployment-new",
       "datasourceTemplate": "github-releases"
